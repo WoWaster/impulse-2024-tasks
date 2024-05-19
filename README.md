@@ -4,5 +4,5 @@
 
 Решения каждой задачи размещено в своей ветке.
 
-- Решение задачи от команды AI.Hardware находится в ветке `rtl-task-1`
-- Решение задачи от команды интерконнекта находится в ветке `rtl-task-2`
+- Решение задачи от команды AI.Hardware находится в ветке [`rtl-task-1`](https://github.com/WoWaster/impulse-2024-tasks/tree/rtl-task-1)
+- Решение задачи от команды интерконнекта находится в ветке [`rtl-task-2`](https://github.com/WoWaster/impulse-2024-tasks/tree/rtl-task-2)
