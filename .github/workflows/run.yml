@@ -1,0 +1,28 @@
+name: Run simulation
+
+on:
+  push:
+    branches:
+      - rtl-task-1
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  simulation:
+    name: Run simulation
+    runs-on: ubuntu-latest
+    container:
+      image: gcr.io/hdl-containers/iverilog:latest
+    steps:
+      - name: Clone project
+        uses: actions/checkout@v4
+
+      - name: Install make
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends make
+
+      - name: Run
+        run: make
